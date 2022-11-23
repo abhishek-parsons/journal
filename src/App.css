@@ -14,11 +14,23 @@ body,
   display: grid;
   height: 100%;
   width: 100%;
-  grid-template-rows: 2fr 5fr;
+  grid-template-rows: 1fr 5fr;
+}
+
+.prompt-container {
+  background-color: #9a86a4;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  padding: 20px;
 }
 
 .prompt {
-  background-color: #9a86a4;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 145%;
+
+  color: #ffffff;
 }
 
 .entry {
@@ -27,6 +39,10 @@ body,
 
 .editor {
   padding: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 145%;
 }
 
 .wrapper {
