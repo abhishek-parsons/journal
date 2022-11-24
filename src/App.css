@@ -14,13 +14,13 @@ body,
   display: grid;
   height: 100%;
   width: 100%;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 6fr;
 }
 
 .prompt-container {
   background-color: #9a86a4;
   display: grid;
-  grid-template-rows: 5fr 1fr;
+  grid-template-rows: 3fr 1fr;
   padding: 20px;
 }
 
@@ -29,8 +29,13 @@ body,
   font-weight: 500;
   font-size: 20px;
   line-height: 145%;
-
   color: #ffffff;
+}
+
+.date {
+  font-style: normal;
+  opacity: 40%;
+  font-size: 16px;
 }
 
 .entry {
@@ -47,4 +52,18 @@ body,
 
 .wrapper {
   height: 100%;
+}
+
+.button {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 5px;
+  gap: 7px;
+
+  color: white;
 }

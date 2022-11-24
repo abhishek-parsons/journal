@@ -1,18 +1,24 @@
 import promptList from "../prompts";
+import moment from "moment";
+import { ShuffleOutline } from "react-ionicons";
+import "animate.css";
+import { useState } from "react";
 
-function Prompt({ selected, onClick }) {
-  const randomPrompt =
-    promptList[Math.floor(Math.random() * promptList.length)];
+function Prompt() {
+  const [prompt, setPrompt] = useState(
+    promptList[Math.floor(Math.random() * promptList.length)]
+  );
+
   return (
-    <div className="prompt-container" onClick={onClick}>
+    <div className="prompt-container">
       <div className="prompt">
-        <p>Date</p>
-        <p>
-          This is the prompt and here is where it will show up. It can contain
-          questions etc that the person might want to answer
-        </p>
+        <p className="date">{moment().format("dddd, MMMM Do YYYY")}</p>
+        <p className="animate__animated animate__fadeInUp">{prompt}</p>
       </div>
-      <div className="controls">controls</div>
+      <div className="button" onClick={() => window.location.reload()}>
+        <ShuffleOutline color={"white"} />
+        Shuffle
+      </div>
     </div>
   );
 }
